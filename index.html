@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Password Generator</title>
+
+    <!-- HTML -->
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="main">
+      <!-- password generator -->
+      <div class="generator">
+        <h1 class="heading">Password Generator</h1>
+        <div class="output">
+          <h5 class="outputText"></h5>
+          <button
+            onclick="handleCopyClipboard()"
+            type="button"
+            class="copyClipboard"
+          >
+            Copy
+          </button>
+        </div>
+        <div class="userKey">
+          <div class="passLenthHead">
+            <div class="passLenthText">
+              <h6 class="passLenthH6">Password Lenth</h6>
+              <p class="passLenthView"></p>
+            </div>
+            <input
+              onchange="passwordLength()"
+              class="passLenth"
+              type="range"
+              value="8"
+              min="6"
+              max="25"
+            />
+            <div class="checkboxContainer">
+              <div class="lowercaseCheckbox">
+                <input
+                  class="inputCheck"
+                  type="checkbox"
+                  id="lowercase"
+                  checked
+                />
+                <label for="lowercase">Lowercase (a-z)</label>
+              </div>
+              <div class="uppercaseCheckbox">
+                <input
+                  class="inputCheck"
+                  type="checkbox"
+                  id="uppercase"
+                />
+                <label for="uppercase">Uppercase (A-Z)</label>
+              </div>
+              <div class="numberCheckbox">
+                <input
+                  class="inputCheck"
+                  type="checkbox"
+                  id="number"
+                />
+                <label for="number">Number (0-9)</label>
+              </div>
+              <div class="specialCharacterCheckbox">
+                <input
+                  class="inputCheck"
+                  type="checkbox"
+                  id="specialCharacter"
+                />
+                <label for="specialCharacter">Special Characters</label>
+              </div>
+            </div>
+
+            <button onclick="generate()" class="submit">
+              Generate Password
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- notification -->
+      <h5 class="notification">Password Copied to Clipboard</h5>
+    </section>
+
+    <!-- Project -->
+    <script src="main.js"></script>
+  </body>
+</html>
