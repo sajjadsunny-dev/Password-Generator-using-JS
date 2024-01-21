@@ -138,7 +138,7 @@ input.inputCheck{
     align-items: start;
   }
   .heading{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   #main .generator{
@@ -165,7 +165,7 @@ input.inputCheck{
     font-size: 14px;
   }
   #main .output .outputText{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 80%;
   }
   #main label{
