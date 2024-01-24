@@ -87,10 +87,11 @@ const showNotification = () => {
 };
 
 // Event Listeners
-const passwordLength = () => {
+passLengthController.addEventListener('input',()=>{
   updatePassLength();
   generatePassword();
-}
+});
+
 lowercaseCheck.addEventListener('change', () => {
   updateCharset('lowercase', lowercaseCheck.checked);
   generatePassword();
